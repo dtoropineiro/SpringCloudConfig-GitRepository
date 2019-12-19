@@ -4,3 +4,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+    routes:
+      auth-service:
+        path: /uaa/** #path that will be intercepted
+        url: auth-service #which url the request will e mapped to
+        stripPrefix: false #if zuul should replace the "/uaa/" segment
+        sensitiveHeaders:
