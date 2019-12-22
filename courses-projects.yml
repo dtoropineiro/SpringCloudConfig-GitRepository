@@ -7,7 +7,10 @@ spring:
 
 server:
   port: 8080 #the default port used for zuul service
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://spring-eureka-server.us-east-1.elasticbeanstalk.com/eureka
 zuul:
   ignoredServices: '*'
   host:
