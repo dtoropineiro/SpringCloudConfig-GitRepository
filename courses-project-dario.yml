@@ -7,7 +7,7 @@ spring:
     password: root2019
 
 server:
-  port: 8080 #the default port used for zuul service
+  port: 5000 #the default port used for zuul service
 eureka:
   client:
     serviceUrl:
