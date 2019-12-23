@@ -8,5 +8,7 @@ eureka:
     serviceUrl:
       defaultZone: http://spring-eureka-server.us-east-1.elasticbeanstalk.com/eureka
 server:
+  port: 5000
   error:
     include-stacktrace: on_trace_param
+    
